@@ -1,0 +1,6 @@
+# Directories
+build/
+
+# Files
+runFast.bat
+.vscode
