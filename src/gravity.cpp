@@ -59,29 +59,26 @@ void onUpdate(std::vector<particle::Circle>& circles, vec2 winSize, float ts)
         {
             circle.clearForces();
             // circle.addForce(vec2 { 0, 98.1f } * circle.getMass() );        // f = ma
-            // Add Earth's gravity if needed (commented in the original code).
-            // circle.addForce(vec2 { 0, 98.1f } * circle.getMass() ); // f = ma
+            circle.addForce(circle.getRaduis() * circle.getVelocity() * -1 * 0.8);
 
             for (particle::Circle& other : circles)
             {
-                if (&circle != &other) // Ensure it's not the same circle.
+                if (&circle != &other)
                 {
                     vec2 pos = other.getPosition() - circle.getPosition();
-                    float distanceSquared = pos.lengthSequared(); // Calculate the squared distance.
+                    float distanceSquared = pos.lengthSequared();
 
-                    if (distanceSquared > 0.01f) // Avoid singularities for very close particles.
+                    if (distanceSquared > 0.01f)
                     {
-                        float distance = sqrt(distanceSquared); // Compute the actual distance.
-                        vec2 direction = pos / distance;        // Normalize the position vector.
+                        float distance = sqrt(distanceSquared);
+                        vec2 direction = pos / distance;
 
                         // Compute gravitational force: F = G * (m1 * m2) / r^2
                         float G = 60.6f; // Gravitational constant.
                         float forceMagnitude = G * (other.getMass() * circle.getMass()) / distanceSquared;
 
-                        // Force is a vector: F = magnitude * direction.
                         vec2 gravity = direction * forceMagnitude;
 
-                        // Add the calculated gravitational force to the circle.
                         circle.addForce(gravity);
                     }
                 }
@@ -91,7 +88,7 @@ void onUpdate(std::vector<particle::Circle>& circles, vec2 winSize, float ts)
 
         // Updates
         circle.updateVelocity(ts);
-        circle.sideCollisions(winSize, true);
+        // circle.sideCollisions(winSize, true);
         circle.updatePosition(ts);
 
         for (particle::Circle& other : circles)
@@ -117,7 +114,7 @@ void onUpdate(std::vector<particle::Circle>& circles, vec2 winSize, float ts)
 int main()
 {
 
-    vec2 win = vec2 {700, 700}; 
+    vec2 win = vec2 {1000, 700}; 
 
 
     // particales vector
@@ -125,7 +122,7 @@ int main()
 
 
     // Object Creation
-    for (int i = 0; i < 200; ++i)
+    for (int i = 0; i < 800; ++i)
     {
         float radius = utils::random(3, 10);
         vec2 pos = {utils::random(0 + radius, win.x - radius), utils::random(0 + radius, win.y - radius)};
