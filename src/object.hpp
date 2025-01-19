@@ -10,7 +10,7 @@ namespace particle
         {
             s_count++;
             m_acceleratation = vec2::zeros();
-            m_Forces.reserve(5);
+            m_forces.reserve(5);
             m_isStatic = false;
             do
             {
@@ -22,7 +22,7 @@ namespace particle
         static int s_count;
 
 
-        void addForce(vec2 force) { m_Forces.push_back(force); }
+        void addForce(vec2 force) { m_forces.push_back(force); }
         float getMass()            { return m_area * m_density; }
         float getMomentum()        { return getMass() * m_velocity.len(); }
         vec2 getPosition()         { return m_pos; }
@@ -36,12 +36,18 @@ namespace particle
         vec2 getAllForces()
         {
             vec2 allForces = vec2::zeros();
-            for (vec2 force : m_Forces)
+            for (vec2 force : m_forces)
             {
                 allForces += force;
             }
             return allForces;
         }
+
+        void clearForces()
+        {
+            m_forces.clear();
+        }
+
 
         void setVelocity(vec2 velosity)
         {
@@ -59,7 +65,17 @@ namespace particle
             m_pos += m_velocity * ts;
         }
 
-        virtual void draw(Color color) = 0;
+        void setRestitution(float restitution)
+        {
+            m_restitution = restitution;
+        }
+
+        float getRestitution()
+        {
+            return m_restitution;
+        }
+
+
         virtual void moveTo(vec2 location) = 0;
         virtual void move(vec2 dPos) = 0;
 
@@ -85,8 +101,9 @@ namespace particle
         vec2 m_acceleratation;
         float m_area;                   // deal with this as a volume.
         float m_density;
+        float m_restitution;
         bool m_isStatic;
-        std::vector<vec2> m_Forces;
+        std::vector<vec2> m_forces;
     }; // object
 
     int Object::s_count = 0;
@@ -102,9 +119,9 @@ namespace particle
             // ...
         }
 
-        void draw(Color color) override
+        void draw()
         {
-            Draw::CircleWithStrok(m_pos, m_radius, 1, color, BLACK);
+            Draw::CircleWithStrok(m_pos, m_radius, 1, m_color, BLACK);
         }
 
         float getRaduis()
@@ -166,7 +183,7 @@ namespace particle
         }
 
 
-        void updateCollisionVelocity(particle::Circle& other, float coefficientOfRestitution)
+        void updateCollisionVelocity(particle::Circle& other)
         {
             float m1 = this->getMass();
             float m2 = other.getMass();
@@ -190,19 +207,39 @@ namespace particle
             if (velocityAlongAxis > 0) return;
 
             // Impulse scalar
-            float impulse = (-(1 + coefficientOfRestitution) * velocityAlongAxis) / (1 / m1 + 1 / m2);
+            float impulse = (-(1 + m_restitution) * velocityAlongAxis) / (1 / m1 + 1 / m2);
 
             vec2 impulseVector = -impulse * collisionAxis;
             this->setVelocity(v1 + impulseVector / m1);
             other.setVelocity(v2 - impulseVector / m2);
 
-            float overlap = this->getRaduis() + other.getRaduis() - distance;
-            if (overlap > 0)
+        }
+
+        void correctOverlap(particle::Circle& other)
+        {
             {
-                vec2 correction = collisionAxis * (overlap / 2);
-                this->moveTo(pos1 - correction);
-                other.moveTo(pos2 + correction);
+
+                // this->setVelocity(getVelocity() + (getVelocity() * -1));
+                // other.setVelocity(getVelocity() + (getVelocity() * -1));
+
+                vec2 relativePos = other.getPosition() - this->getPosition();
+                vec2 relativeVelocity = other.getVelocity() - this->getVelocity();
+    
+                float distance = relativePos.len();
+                if (distance < 1e-6f) distance = 1e-6f; // Avoid division by zero
+                    vec2 collisionAxis = relativePos / distance;
+    
+
+
+                float overlap = this->getRaduis() + other.getRaduis() - distance;// 
+                if (overlap > 0)
+                {
+                    vec2 correction = collisionAxis * (overlap / 2);
+                    this->moveTo(this->getPosition() - correction);
+                    other.moveTo(other.getPosition() + correction);
+                }
             }
+
         }
 
         void setColor(Color col)
@@ -221,7 +258,7 @@ namespace particle
             return m_acceleratation;
         }
 
-        vec2 setAcceleration(vec2 acceleration)
+        void setAcceleration(vec2 acceleration)
         {
             m_acceleratation = acceleration;
         }

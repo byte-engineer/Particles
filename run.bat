@@ -8,6 +8,7 @@ if exist build (
 mkdir build
 cd build
 
+
 cmake -G "Ninja" ../
 if errorlevel 1 (
     echo CMake configuration failed.

@@ -21,6 +21,11 @@ struct vec2
         return std::sqrt(x*x + y*y);
     }
 
+    float lengthSequared()
+    {
+        return x*x + y*y;
+    }
+
     float distance(const vec2& other) const {
         return std::sqrt( (other.x - x)*(other.x - x) + (other.y - y)*(other.y - y) );
     }
