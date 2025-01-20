@@ -269,9 +269,12 @@ namespace particle
             m_velocity += ts * m_acceleratation;
         }
 
-        private:
-            float m_radius;
-            Color m_color;
+        
+        std::vector<vec2> path;
+
+    private:
+        float m_radius;
+        Color m_color;
 
     }; // Circle 
 
