@@ -9,7 +9,7 @@ mkdir build
 cd build
 
 
-cmake -G "Ninja" ../
+cmake -G "Ninja" ..
 if errorlevel 1 (
     echo CMake configuration failed.
     exit /b 1

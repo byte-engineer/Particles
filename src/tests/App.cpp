@@ -1,12 +1,12 @@
-#include <raylib.h>
+#include "raylib.h"
 
 #include <vector>
 #include <string>
 
-#include <vec.hpp>
-#include <draw.hpp>
-#include <utils.hpp>
-#include <object.hpp>
+#include "vec.hpp"
+#include "draw.hpp"
+#include "utils.hpp"
+#include "object.hpp"
 
 
 vec2 randomPos(vec2 win)

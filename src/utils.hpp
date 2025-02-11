@@ -67,4 +67,4 @@ namespace utils
         return Color { (unsigned char)random(min, max), (unsigned char)random(min, max), (unsigned char)random(min, max), 255};
     }
 
-} // utils 
+} // utils

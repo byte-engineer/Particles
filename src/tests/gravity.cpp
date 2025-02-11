@@ -1,4 +1,4 @@
-#include <raylib.h>
+#include "raylib.h"
 
 #include <vector>
 #include <string>
@@ -6,21 +6,21 @@
 #include <execution>
 #include <mutex>
 
-#include <vec.hpp>
-#include <draw.hpp>
-#include <utils.hpp>
-#include <object.hpp>
+#include "vec.hpp"
+#include "draw.hpp"
+#include "utils.hpp"
+#include "object.hpp"
 
 
 
 void keyEvent(std::vector<particle::Circle>& circles)
 {
-    vec2 mousePos = vec2 {GetMousePosition().x, GetMousePosition().y};\
+    vec2 mousePos = vec2 {GetMousePosition().x, GetMousePosition().y};
     vec2 mouseDlta= vec2 {GetMouseDelta().x, GetMouseDelta().y};
 
     if (IsMouseButtonPressed(1))
     {
-        particle::Circle cir({GetMousePosition().x, GetMousePosition().y}, 10, 200);
+        particle::Circle cir({GetMousePosition().x, GetMousePosition().y}, 10, 100);
         cir.setVelocity({0, 0});
         cir.setColor(BLACK);
         circles.push_back(cir);
@@ -62,9 +62,6 @@ void keyEvent(std::vector<particle::Circle>& circles)
 }
 
 
-
-
-
 void onUpdate(std::vector<particle::Circle>& circles, vec2 winSize, float ts)
 {
     BeginDrawing();
@@ -103,7 +100,7 @@ void onUpdate(std::vector<particle::Circle>& circles, vec2 winSize, float ts)
                         vec2 direction = pos / distance;
 
                         // Compute gravitational force: F = G * (m1 * m2) / r^2
-                        float G = -10.0f; // Gravitational constant.
+                        float G = 100.0f; // Gravitational constant.
                         float forceMagnitude = G * (other.getMass() * circle.getMass()) / distanceSquared;
 
                         vec2 gravity = direction * forceMagnitude;
@@ -112,7 +109,6 @@ void onUpdate(std::vector<particle::Circle>& circles, vec2 winSize, float ts)
                     }
                 }
             }
-
         }
 
         // Updates
@@ -162,11 +158,11 @@ int main()
 
 
     // Object Creation
-    for (int i = 0; i < 1000; ++i)
+    for (int i = 0; i < 700; ++i)
     {
-        float radius = utils::random(3, 5);
+        float radius = utils::random(5, 10);
         vec2 pos = {utils::random(0 + radius, win.x - radius), utils::random(0 + radius, win.y - radius)};
-        vec2 vel =  {utils::random(-100 , 100), utils::random(-100 , 100)};
+        vec2 vel =  {utils::random(-1000 , 1000), utils::random(-100 , 100)};
         particle::Circle newCircle(pos, radius, 1);
         newCircle.setRestitution(0.95f);
         newCircle.setVelocity(vel);
