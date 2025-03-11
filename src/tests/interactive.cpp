@@ -112,6 +112,8 @@ void onUpdate(std::vector<particle::Circle>& circles, vec2 winSize, float ts)
         circle.sideCollisions(winSize, false);
         circle.updatePosition(ts);
 
+        
+
         for (particle::Circle& other : circles)
         {
             if (circle.isCollide(other))
@@ -142,12 +144,13 @@ int main()
     std::vector<particle::Circle> circles;
 
 
+    int N = 2000;
     // Object Creation
-    for (int i = 0; i < 100; ++i)
+    for (int i = 0; i < N; ++i)
     {
-        particle::Circle newCircle(randomPos(win), 7, 1);
+        particle::Circle newCircle(randomPos(win), ((i/(float)N)*4)+2, (i/(float)N) );
         newCircle.setRestitution(0.95f);
-        newCircle.setColor(utils::randColor(128));
+        newCircle.setColor(Color { (unsigned char)((i / (float)N) * 255), 128, 128, 255 });    // utils::randColor(128)
         circles.push_back(newCircle);
     }
 

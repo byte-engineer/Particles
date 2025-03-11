@@ -13,35 +13,33 @@
 
 int main()
 {
-
-    vec2 win = vec2 {700, 700}; 
-
-
-    // particales vector
-    std::vector<particle::Circle> circles;
-
-
-    // Object Creation
-    for (int i = 0; i < 100; ++i)
-    {
-        particle::Circle newCircle(randomPos(win), 7, 1);
-        newCircle.setRestitution(0.95f);
-        newCircle.setColor(utils::randColor(128));
-        circles.push_back(newCircle);
-    }
+    particle::Circle circle( vec2{100, 100}, 10);
+    circle.setColor(GREEN);
+    circle.setAcceleration(vec2{98, 0});
 
 
 
-    // Window initilization.
-    InitWindow(win.x , win.y, "Simulation");
-    SetTargetFPS(120);
-
+    InitWindow(400, 400, "Test");
+    SetTargetFPS(60);
+    float ts = 1/60.; 
 
     while (!WindowShouldClose())
     {
-        float ts = GetFrameTime();
-        onUpdate(circles, win, ts);
-    }
+        BeginDrawing();
 
+        {
+            circle.clearForces();
+            circle.addForce(vec2 { 0, 981.f } * circle.getMass() );        // f = ma
+            // circle.addForce(-10 * (circle.getVelocity()*circle.getVelocity()));
+        }
+
+        ClearBackground(Color { 227, 192, 118, 255 });
+        circle.sideCollisions({400, 400}, true);
+        circle.updateVelocity(ts);
+        circle.updatePosition(ts);
+        circle.setRestitution(0.1);
+        circle.draw();
+        EndDrawing();
+    }
     CloseWindow();
 }
