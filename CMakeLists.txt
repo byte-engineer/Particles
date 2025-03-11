@@ -14,6 +14,6 @@ include_directories(
 link_directories("${PROJECT_SOURCE_DIR}/3rd/lib")
 
 
-add_executable(Main src/tests/interactive.cpp)
-# add_executable(Main src/tests/gravity.cpp)
+# add_executable(Main src/tests/interactive.cpp)
+add_executable(Main src/tests/com.cpp)
 target_link_libraries(Main PRIVATE raylib winmm)
