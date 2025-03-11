@@ -22,7 +22,7 @@ void keyEvent(std::vector<particle::Circle>& circles)
     vec2 mousePos = vec2 {GetMousePosition().x, GetMousePosition().y};\
     vec2 mouseDlta= vec2 {GetMouseDelta().x, GetMouseDelta().y};
 
-    if (IsKeyDown(KEY_S) && (circles.size() < 1500))
+    if (IsKeyDown(KEY_S) && (circles.size() < 20000))
     {
         for (int i = 0; i < 3; ++i)
         {
