@@ -112,7 +112,11 @@ void onUpdate(std::vector<particle::Circle>& circles, vec2 winSize, float ts)
         circle.sideCollisions(winSize, false);
         circle.updatePosition(ts);
 
-        
+
+        if (circle.getVelocity().len() < 0.01)
+        {
+            circle.setVelocity(vec2{0.0, 0.0});
+        }
 
         for (particle::Circle& other : circles)
         {
@@ -136,13 +140,10 @@ void onUpdate(std::vector<particle::Circle>& circles, vec2 winSize, float ts)
 
 int main()
 {
-
     vec2 win = vec2 {700, 700}; 
-
 
     // particales vector
     std::vector<particle::Circle> circles;
-
 
     int N = 2000;
     // Object Creation
