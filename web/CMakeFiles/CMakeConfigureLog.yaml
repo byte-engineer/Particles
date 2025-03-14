@@ -1,0 +1,1522 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      The system is: Windows - 10.0.26100 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -Aa 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -D__CLASSIC_C__ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -Aa 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -D__CLASSIC_C__ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:1205 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:1205 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:1205 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:1205 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/CMakeFiles/CMakeScratch/TryCompile-vt85an"
+      binary: "C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/CMakeFiles/CMakeScratch/TryCompile-vt85an"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/CMakeFiles/CMakeScratch/TryCompile-vt85an'
+        
+        Run Build Command(s): C:/Users/Hp/AppData/Local/Programs/Python/Python312/Scripts/ninja.exe -v cmTC_4edc2
+        
+        CreateProcess failed. Command attempted:
+        "C:\\Users\\Hp\\Desktop\\bilal\\files\\Codes\\C\\Projects\\Shapes\\Shapes\\web\\emsdk\\upstream\\emscripten\\emcc    -o CMakeFiles\\cmTC_4edc2.dir\\CMakeCCompilerABI.c.obj -c C:\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
+        ninja: fatal: CreateProcess: %1 is not a valid Win32 application.\x0d
+        
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Check for working C compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc"
+    directories:
+      source: "C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/CMakeFiles/CMakeScratch/TryCompile-m2jq0p"
+      binary: "C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/CMakeFiles/CMakeScratch/TryCompile-m2jq0p"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/CMakeFiles/CMakeScratch/TryCompile-m2jq0p'
+        
+        Run Build Command(s): C:/Users/Hp/AppData/Local/Programs/Python/Python312/Scripts/ninja.exe -v cmTC_22ec6
+        
+        CreateProcess failed. Command attempted:
+        "C:\\Users\\Hp\\Desktop\\bilal\\files\\Codes\\C\\Projects\\Shapes\\Shapes\\web\\emsdk\\upstream\\emscripten\\emcc    -o CMakeFiles\\cmTC_22ec6.dir\\testCCompiler.c.obj -c C:\\Users\\Hp\\Desktop\\bilal\\files\\Codes\\C\\Projects\\Shapes\\Shapes\\web\\CMakeFiles\\CMakeScratch\\TryCompile-m2jq0p\\testCCompiler.c"
+        ninja: fatal: CreateProcess: %1 is not a valid Win32 application.\x0d
+        
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -Aa 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -D__CLASSIC_C__ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -Aa 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -D__CLASSIC_C__ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:1205 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:1205 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:1205 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:1205 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/CMakeFiles/CMakeScratch/TryCompile-6ck7bj"
+      binary: "C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/CMakeFiles/CMakeScratch/TryCompile-6ck7bj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/CMakeFiles/CMakeScratch/TryCompile-6ck7bj'
+        
+        Run Build Command(s): C:/Users/Hp/AppData/Local/Programs/Python/Python312/Scripts/ninja.exe -v cmTC_55648
+        
+        CreateProcess failed. Command attempted:
+        "C:\\Users\\Hp\\Desktop\\bilal\\files\\Codes\\C\\Projects\\Shapes\\Shapes\\web\\emsdk\\upstream\\emscripten\\emcc    -o CMakeFiles\\cmTC_55648.dir\\CMakeCCompilerABI.c.obj -c C:\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
+        ninja: fatal: CreateProcess: %1 is not a valid Win32 application.\x0d
+        
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Check for working C compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc"
+    directories:
+      source: "C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/CMakeFiles/CMakeScratch/TryCompile-asw79q"
+      binary: "C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/CMakeFiles/CMakeScratch/TryCompile-asw79q"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/CMakeFiles/CMakeScratch/TryCompile-asw79q'
+        
+        Run Build Command(s): C:/Users/Hp/AppData/Local/Programs/Python/Python312/Scripts/ninja.exe -v cmTC_1dae2
+        
+        CreateProcess failed. Command attempted:
+        "C:\\Users\\Hp\\Desktop\\bilal\\files\\Codes\\C\\Projects\\Shapes\\Shapes\\web\\emsdk\\upstream\\emscripten\\emcc    -o CMakeFiles\\cmTC_1dae2.dir\\testCCompiler.c.obj -c C:\\Users\\Hp\\Desktop\\bilal\\files\\Codes\\C\\Projects\\Shapes\\Shapes\\web\\CMakeFiles\\CMakeScratch\\TryCompile-asw79q\\testCCompiler.c"
+        ninja: fatal: CreateProcess: %1 is not a valid Win32 application.\x0d
+        
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -Aa 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -D__CLASSIC_C__ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -Aa 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -D__CLASSIC_C__ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:1205 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:1205 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      unknown error
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:1205 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:1205 (message)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/CMakeFiles/CMakeScratch/TryCompile-loxg3v"
+      binary: "C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/CMakeFiles/CMakeScratch/TryCompile-loxg3v"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/CMakeFiles/CMakeScratch/TryCompile-loxg3v'
+        
+        Run Build Command(s): C:/Users/Hp/AppData/Local/Programs/Python/Python312/Scripts/ninja.exe -v cmTC_382ba
+        
+        CreateProcess failed. Command attempted:
+        "C:\\Users\\Hp\\Desktop\\bilal\\files\\Codes\\C\\Projects\\Shapes\\Shapes\\web\\emsdk\\upstream\\emscripten\\emcc    -o CMakeFiles\\cmTC_382ba.dir\\CMakeCCompilerABI.c.obj -c C:\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
+        ninja: fatal: CreateProcess: %1 is not a valid Win32 application.\x0d
+        
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Check for working C compiler: C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/emsdk/upstream/emscripten/emcc"
+    directories:
+      source: "C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/CMakeFiles/CMakeScratch/TryCompile-av1qr1"
+      binary: "C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/CMakeFiles/CMakeScratch/TryCompile-av1qr1"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Hp/Desktop/bilal/files/Codes/C/Projects/Shapes/Shapes/web/CMakeFiles/CMakeScratch/TryCompile-av1qr1'
+        
+        Run Build Command(s): C:/Users/Hp/AppData/Local/Programs/Python/Python312/Scripts/ninja.exe -v cmTC_9c180
+        
+        CreateProcess failed. Command attempted:
+        "C:\\Users\\Hp\\Desktop\\bilal\\files\\Codes\\C\\Projects\\Shapes\\Shapes\\web\\emsdk\\upstream\\emscripten\\emcc    -o CMakeFiles\\cmTC_9c180.dir\\testCCompiler.c.obj -c C:\\Users\\Hp\\Desktop\\bilal\\files\\Codes\\C\\Projects\\Shapes\\Shapes\\web\\CMakeFiles\\CMakeScratch\\TryCompile-av1qr1\\testCCompiler.c"
+        ninja: fatal: CreateProcess: %1 is not a valid Win32 application.\x0d
+        
+        
+      exitCode: 1
+...

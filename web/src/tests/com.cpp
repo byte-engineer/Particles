@@ -1,19 +1,18 @@
-#include <raylib.h>
+#include "raylib.h"
 
 #include <vector>
 #include <string>
 
-
-#include <vec.hpp>
-#include <draw.hpp>
-#include <utils.hpp>
-#include <object.hpp>
+#include "vec.hpp"
+#include "draw.hpp"
+#include "utils.hpp"
+#include "object.hpp"
 
 
 
 vec2 randomPos(vec2 win)
 {
-    return (vec2::random().normalized()*75)+(win/2);
+    return (vec2::random().normalized()*100)+(win/2);
 }
 
 
@@ -22,11 +21,12 @@ void keyEvent(std::vector<particle::Circle>& circles)
     vec2 mousePos = vec2 {GetMousePosition().x, GetMousePosition().y};\
     vec2 mouseDlta= vec2 {GetMouseDelta().x, GetMouseDelta().y};
 
-    if (IsKeyDown(KEY_S) && (circles.size() < 20000))
+    if (IsKeyPressed(KEY_S) && (circles.size() < 1500))
     {
-        for (int i = 0; i < 3; ++i)
+        for (int i = 0; i < 1; ++i)
         {
             particle::Circle newCircle(mousePos, 7, 1);
+            newCircle.setVelocity(vec2::zeros());
             newCircle.setRestitution(0.95f);
             newCircle.setColor(utils::randColor(128));
             circles.push_back(newCircle);
@@ -34,9 +34,9 @@ void keyEvent(std::vector<particle::Circle>& circles)
     }
 
 
-    if (IsKeyDown(KEY_D))
+    if (IsKeyPressed(KEY_D))
     {
-        for (int i = 0; i < 3 && !circles.empty(); ++i)
+        for (int i = 0; i < 1 && !circles.empty(); ++i)
         {
         if (!circles.empty())
             {
@@ -68,7 +68,7 @@ void keyEvent(std::vector<particle::Circle>& circles)
             if (closest < 1000.0f)
             {
                 circles[index].moveTo(mousePos);
-                circles[index].setVelocity(mouseDlta * 43);
+                circles[index].setVelocity(mouseDlta * 20);
             }
         }
     }
@@ -81,15 +81,17 @@ void keyEvent(std::vector<particle::Circle>& circles)
             for (size_t i = 0; i < circles.size(); ++i)
             {
                 float distance = (mousePos - circles[i].getPosition()).len();
-                if (distance < 70 && distance > 1e-3f)
+                if (distance < 7000 && distance > 1e-3f)
                 {
-                    circles[i].setVelocity(circles[i].getVelocity() + (mouseDlta * 50 / (distance)));
+                    circles[i].setVelocity(circles[i].getVelocity() + (mouseDlta * 40 / (distance)));
                 }
             }
         }
     }
 }
 
+
+// OnUpdate
 void onUpdate(std::vector<particle::Circle>& circles, vec2 winSize, float ts)
 {
     BeginDrawing();
@@ -99,38 +101,74 @@ void onUpdate(std::vector<particle::Circle>& circles, vec2 winSize, float ts)
     DrawFPS(4, 4);
     DrawText(std::to_string(circles.size()).c_str(), 4, 20, 20, RED);
 
+    std::vector<vec2> positions; 
+
     for (particle::Circle& circle : circles)
     {
         // Settings
         {
             circle.clearForces();
-            circle.addForce(vec2 { 0, 98.1f } * circle.getMass() );        // f = ma
+            // circle.addForce(vec2 { 0, 98.1f } * circle.getMass() );        // f = ma
+
+
+            for (particle::Circle& other : circles)
+            {
+                if (&circle != &other)
+                {
+                    vec2 pos = other.getPosition() - circle.getPosition();
+                    float distanceSquared = pos.lengthSequared();
+
+                    if (distanceSquared > 0.001f)
+                    {
+                        float distance = sqrt(distanceSquared);
+                        vec2 direction = pos / distance;
+
+                        // Compute gravitational force: F = G * (m1 * m2) / r^2
+                        float G = 2000.0f; // Gravitational constant.
+                        float forceMagnitude = G * (other.getMass() * circle.getMass()) / distanceSquared;
+
+                        vec2 gravity = direction * forceMagnitude;
+
+                        circle.addForce(gravity);
+                    }
+                }
+            }
+
         }
 
-        // Updates
-        circle.updateVelocity(ts);
-        circle.sideCollisions(winSize, false);
-        circle.updatePosition(ts);
-
-
-        if (circle.getVelocity().len() < 0.01)
-        {
-            circle.setVelocity(vec2{0.0, 0.0});
-        }
 
         for (particle::Circle& other : circles)
         {
             if (circle.isCollide(other))
             {
-                // circle.correctOverlap(other);
+                circle.correctOverlap(other);
                 circle.updateCollisionVelocity(other);
                 circle.correctOverlap(other);
             }
         }
+        // Updates
+        circle.updateVelocity(ts);
+        // circle.sideCollisions(winSize, true);
+        circle.updatePosition(ts);
 
+
+
+
+        positions.push_back(circle.getPosition());
 
         // Drawing
         circle.draw();
+    }
+
+    if (!positions.empty())
+    {
+
+        vec2 positionsSum = vec2::zeros();
+        for (vec2 pos : positions)
+            positionsSum += pos;
+
+        vec2 averagePosition = positionsSum / positions.size();
+        DrawCircle(averagePosition.x, averagePosition.y, 4, RED);
     }
 
     EndDrawing();
@@ -140,24 +178,30 @@ void onUpdate(std::vector<particle::Circle>& circles, vec2 winSize, float ts)
 
 int main()
 {
+
     vec2 win = vec2 {700, 700}; 
+
 
     // particales vector
     std::vector<particle::Circle> circles;
 
-    int N = 2000;           // Number of circles
+
     // Object Creation
-    for (int i = 0; i < N; ++i)
+    for (int i = 0; i < 1; ++i)
     {
-        particle::Circle newCircle(randomPos(win), ((i/(float)N)*4)+2, (i/(float)N) );
+        particle::Circle newCircle(randomPos(win), 7, 1);
+        newCircle.setVelocity(vec2::zeros());
         newCircle.setRestitution(0.95f);
-        newCircle.setColor( Color{ (unsigned char)((i / (float)N) * 255), 128, 128, 255 } );    // utils::randColor(128)
+        newCircle.setColor(utils::randColor(128));
         circles.push_back(newCircle);
     }
+
+
 
     // Window initilization.
     InitWindow(win.x , win.y, "Simulation");
     SetTargetFPS(120);
+
 
     while (!WindowShouldClose())
     {
