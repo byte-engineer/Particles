@@ -100,7 +100,7 @@ void onUpdate(std::vector<particle::Circle>& circles, vec2 winSize, float ts)
                         vec2 direction = pos / distance;
 
                         // Compute gravitational force: F = G * (m1 * m2) / r^2
-                        float G = 100.0f; // Gravitational constant.
+                        float G = 100.0f; // Gravitational constant :|
                         float forceMagnitude = G * (other.getMass() * circle.getMass()) / distanceSquared;
 
                         vec2 gravity = direction * forceMagnitude;

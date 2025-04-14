@@ -3,11 +3,11 @@
 #include <vector>
 #include <string>
 
-
-#include <vec.hpp>
-#include <draw.hpp>
-#include <utils.hpp>
-#include <object.hpp>
+#include "vec.hpp"
+#include "draw.hpp"
+#include "utils.hpp"
+#include "object.hpp"
+// #include "object_f.hpp"
 
 
 
@@ -45,10 +45,12 @@ void keyEvent(std::vector<particle::Circle>& circles)
         }
     }
 
+
     if (IsKeyPressed(KEY_C))
     {
         circles.clear();
     }
+
 
     size_t index = 0;
     if (IsMouseButtonDown(1))
@@ -89,6 +91,7 @@ void keyEvent(std::vector<particle::Circle>& circles)
         }
     }
 }
+
 
 void onUpdate(std::vector<particle::Circle>& circles, vec2 winSize, float ts)
 {

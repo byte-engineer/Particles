@@ -3,14 +3,15 @@
 #include <vector>
 #include <string>
 #include <execution>
-#include <algorithm>
+
+#include <mutex>
 
 #include <vec.hpp>
 #include <draw.hpp>
 #include <utils.hpp>
 #include <object.hpp>
 
-
+std::mutex mtx;
 
 void onUpdate(std::vector<particle::Circle>& circles, vec2 winSize, float ts)
 {
@@ -18,66 +19,31 @@ void onUpdate(std::vector<particle::Circle>& circles, vec2 winSize, float ts)
     ClearBackground(Color { 220, 220, 220, 255 });
 
 
+    std::mutex collisionMutex; // Mutex for collision handling
     
-    std::for_each(std::execution::par, circles.begin(), circles.end(), [&](particle::Circle& circle) {
-                // Updates
-                circle.updateVelocity(ts);
-                circle.sideCollisions(winSize);
-                circle.updatePosition(ts);
-        
-        
-                if (circle.getVelocity().len() < 0.01)
+    std::for_each(std::execution::par, circles.begin(), circles.end(), 
+        [&circles, &ts, &winSize, &collisionMutex](particle::Circle& circle)
+        {
+            // Updates
+            circle.updateVelocity(ts);
+            circle.sideCollisions(winSize);
+            circle.updatePosition(ts);
+    
+            // Collision handling
+            std::for_each(std::execution::par, circles.begin(), circles.end(), 
+                [&circle, &collisionMutex](particle::Circle& other)
                 {
-                    circle.setVelocity(vec2{0.0, 0.0});
-                }
-        
-                for (particle::Circle& other : circles)
-                {
-                    if (circle.isCollide(other))
+                    if (&circle != &other && circle.isCollide(other)) // Avoid self-collision
                     {
-                        // circle.correctOverlap(other);
+                        std::lock_guard<std::mutex> lock(collisionMutex);
                         circle.updateCollisionVelocity(other);
-                        // circle.correctOverlap(other);
                     }
-                }
-        
-        
-                // Drawing
-                circle.draw();
-        
-    });
-
+                });
     
-
-
-    // for (particle::Circle& circle : circles)
-    // {
-    //     // Updates
-    //     circle.updateVelocity(ts);
-    //     circle.sideCollisions(winSize);
-    //     circle.updatePosition(ts);
-
-
-    //     if (circle.getVelocity().len() < 0.01)
-    //     {
-    //         circle.setVelocity(vec2{0.0, 0.0});
-    //     }
-
-    //     for (particle::Circle& other : circles)
-    //     {
-    //         if (circle.isCollide(other))
-    //         {
-    //             // circle.correctOverlap(other);
-    //             circle.updateCollisionVelocity(other);
-    //             // circle.correctOverlap(other);
-    //         }
-    //     }
-
-
-    //     // Drawing
-    //     circle.draw();
-    // }
-
+            // Drawing (No need for a mutex here since rendering is usually thread-safe per object)
+            circle.draw();
+        });
+    
     DrawFPS(4, 4);
     DrawText(std::to_string(circles.size()).c_str(), 4, 20, 20, RED);
 
