@@ -1,26 +1,22 @@
 #include <raylib.h>
 
-#include <vector>
 #include <string>
+#include <vector>
 
-#include "vec.hpp"
 #include "draw.hpp"
-#include "utils.hpp"
 #include "object.hpp"
-// #include "object_f.hpp"
-
-
+#include "utils.hpp"
+#include "vec.hpp"
 
 vec2 randomPos(vec2 win)
 {
-    return (vec2::random().normalized()*75)+(win/2);
+    return (vec2::random().normalized() * 75) + (win / 2);
 }
 
-
-void keyEvent(std::vector<particle::Circle>& circles)
+void keyEvent(std::vector<particle::Circle> &circles)
 {
-    vec2 mousePos = vec2 {GetMousePosition().x, GetMousePosition().y};\
-    vec2 mouseDlta= vec2 {GetMouseDelta().x, GetMouseDelta().y};
+    vec2 mousePos = vec2{GetMousePosition().x, GetMousePosition().y};
+    vec2 mouseDlta = vec2{GetMouseDelta().x, GetMouseDelta().y};
 
     if (IsKeyDown(KEY_S) && (circles.size() < 20000))
     {
@@ -33,24 +29,21 @@ void keyEvent(std::vector<particle::Circle>& circles)
         }
     }
 
-
     if (IsKeyDown(KEY_D))
     {
         for (int i = 0; i < 3 && !circles.empty(); ++i)
         {
-        if (!circles.empty())
+            if (!circles.empty())
             {
                 circles.pop_back();
             }
         }
     }
 
-
     if (IsKeyPressed(KEY_C))
     {
         circles.clear();
     }
-
 
     size_t index = 0;
     if (IsMouseButtonDown(1))
@@ -75,7 +68,6 @@ void keyEvent(std::vector<particle::Circle>& circles)
         }
     }
 
-
     if (IsMouseButtonDown(0))
     {
         if (!circles.empty())
@@ -92,22 +84,21 @@ void keyEvent(std::vector<particle::Circle>& circles)
     }
 }
 
-
-void onUpdate(std::vector<particle::Circle>& circles, vec2 winSize, float ts)
+void onUpdate(std::vector<particle::Circle> &circles, vec2 winSize, float ts)
 {
     BeginDrawing();
-    ClearBackground(Color { 227, 192, 118, 255 });
+    ClearBackground(Color{227, 192, 118, 255});
 
     keyEvent(circles);
     DrawFPS(4, 4);
     DrawText(std::to_string(circles.size()).c_str(), 4, 20, 20, RED);
 
-    for (particle::Circle& circle : circles)
+    for (particle::Circle &circle : circles)
     {
         // Settings
         {
             circle.clearForces();
-            circle.addForce(vec2 { 0, 98.1f } * circle.getMass() );        // f = ma
+            circle.addForce(vec2{0, 98.1f} * circle.getMass()); // f = ma
         }
 
         // Updates
@@ -115,13 +106,12 @@ void onUpdate(std::vector<particle::Circle>& circles, vec2 winSize, float ts)
         circle.sideCollisions(winSize, false);
         circle.updatePosition(ts);
 
-
         if (circle.getVelocity().len() < 0.01)
         {
             circle.setVelocity(vec2{0.0, 0.0});
         }
 
-        for (particle::Circle& other : circles)
+        for (particle::Circle &other : circles)
         {
             if (circle.isCollide(other))
             {
@@ -131,7 +121,6 @@ void onUpdate(std::vector<particle::Circle>& circles, vec2 winSize, float ts)
             }
         }
 
-
         // Drawing
         circle.draw();
     }
@@ -139,27 +128,32 @@ void onUpdate(std::vector<particle::Circle>& circles, vec2 winSize, float ts)
     EndDrawing();
 }
 
-
-
 int main()
 {
-    vec2 win = vec2 {700, 700}; 
+    SetTraceLogLevel(LOG_NONE);
+
+    vec2 win = vec2{700, 700};
 
     // particales vector
     std::vector<particle::Circle> circles;
 
-    int N = 2000;           // Number of circles
+    int N = 800; // Number of circles
     // Object Creation
     for (int i = 0; i < N; ++i)
     {
-        particle::Circle newCircle(randomPos(win), ((i/(float)N)*4)+2, (i/(float)N) );
-        newCircle.setRestitution(0.95f);
-        newCircle.setColor( Color{ (unsigned char)((i / (float)N) * 255), 128, 128, 255 } );    // utils::randColor(128)
+        particle::Circle newCircle(randomPos(win), ((i / (float)N) * 4) + 2, 1); // 100 * ((float)N / i)
+        newCircle.setRestitution(0.9f);
+        newCircle.setColor(Color{(unsigned char)((i / (float)N) * 255), 128, 128, 255}); // utils::randColor(128)
         circles.push_back(newCircle);
     }
 
+    // one spicial ball
+    particle::Circle spicialCircle(win / 2, 10, 1000);
+    spicialCircle.setColor(RED);
+    circles.push_back(spicialCircle);
+
     // Window initilization.
-    InitWindow(win.x , win.y, "Simulation");
+    InitWindow(win.x, win.y, "Simulation");
     SetTargetFPS(120);
 
     while (!WindowShouldClose())

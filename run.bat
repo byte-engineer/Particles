@@ -1,24 +1,16 @@
 @echo off
 
-cls
-if exist build (
-    rmdir /s /q build
-)
 
-mkdir build
-cd build
-
-
-cmake -G "Ninja" ..
+cmake -G "Ninja" -S . -B build
 if errorlevel 1 (
     echo CMake configuration failed.
     exit /b 1
 )
 
-ninja
+cmake --build build
 if errorlevel 1 (
     echo Build failed.
     exit /b 1
 )
-cls
-Main.exe
+
+.\build\Main.exe

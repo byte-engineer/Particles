@@ -5,27 +5,27 @@
 
 namespace utils
 {
-    class Timer
-    {
-    private:
-        std::chrono::time_point<std::chrono::steady_clock> start;
-        std::chrono::time_point<std::chrono::steady_clock> end;
+    // class Timer
+    // {
+    // private:
+    //     std::chrono::time_point<std::chrono::steady_clock> start;
+    //     std::chrono::time_point<std::chrono::steady_clock> end;
 
-    public:
-        Timer()
-        {
-            start = std::chrono::high_resolution_clock::now();
-        }
+    // public:
+    //     Timer()
+    //     {
+    //         start = std::chrono::high_resolution_clock::now();
+    //     }
 
-        ~Timer()
-        {
-            end = std::chrono::high_resolution_clock::now();
+    //     ~Timer()
+    //     {
+    //         end = std::chrono::high_resolution_clock::now();
 
-            auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+    //         auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
 
-            std::cout << "Time: "<< "( " << duration.count()*0.001 << "ms )" << std::endl;
-        }
-    };
+    //         std::cout << "Time: "<< "( " << duration.count()*0.001 << "ms )" << std::endl;
+    //     }
+    // };
 
 
     float random(float min, float max)

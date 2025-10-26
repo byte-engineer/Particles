@@ -1,46 +1,80 @@
 #pragma once
 #include <cmath>
-#include <iostream>
 #include <random>
+#include <limits> // For std::numeric_limits
 
-// #define PI 3.14159265358979323846
-#define TORAD (PI/180)
-#define TODEG (180/PI)
+// Define this in your build system (e.g., -DPARTICLE_DEBUG=1) to enable printing
+// #define PARTICLE_DEBUG 1
+#if defined(PARTICLE_DEBUG) && PARTICLE_DEBUG == 1
+#include <iostream>
+#include <ostream>
+#endif
+
+#undef PI
+
+// Modern C++ constants are type-safe and namespace-scoped
+static constexpr double PI = 3.14159265358979323846;
+static constexpr float TORAD = static_cast<float>(PI / 180.0);
+static constexpr float TODEG = static_cast<float>(180.0 / PI);
 
 struct vec2
 {
     float x;
     float y;
 
-    static vec2 zeros() { return vec2{ 0, 0 }; }
-    static vec2 ones() { return vec2{ 1, 1 }; }
+    /**
+     * @brief Checks if two floats are within an epsilon (tolerance) of each other.
+     */
+    static bool isNear(float a, float b, float epsilon = std::numeric_limits<float>::epsilon())
+    {
+        return std::abs(a - b) <= epsilon;
+    }
 
-    float dot(const vec2& other) const { return x * other.x + y * other.y; }
+    static constexpr vec2 zeros() noexcept { return vec2{ 0.0f, 0.0f }; }
+    static constexpr vec2 ones() noexcept { return vec2{ 1.0f, 1.0f }; }
 
-    float len() const {
+    float dot(const vec2& other) const noexcept { return x * other.x + y * other.y; }
+
+    float len() const noexcept {
         return std::sqrt(x*x + y*y);
     }
 
-    float lengthSequared()
-    {
+    /**
+     * @brief Returns the squared length (magnitude) of the vector.
+     * Faster than len() as it avoids sqrt.
+     */
+    float lenSq() const noexcept {
         return x*x + y*y;
     }
 
-    float distance(const vec2& other) const {
-        return std::sqrt( (other.x - x)*(other.x - x) + (other.y - y)*(other.y - y) );
+    float distance(const vec2& other) const noexcept {
+        const float dx = other.x - x;
+        const float dy = other.y - y;
+        return std::sqrt(dx*dx + dy*dy);
     }
 
-    static vec2 random(float min=-1, float max=1) {
+    /**
+     * @brief Returns the squared distance to another vector.
+     * Faster than distance() as it avoids sqrt. Ideal for comparisons.
+     */
+    float distanceSq(const vec2& other) const noexcept {
+        const float dx = other.x - x;
+        const float dy = other.y - y;
+        return (dx*dx + dy*dy);
+    }
+
+    static vec2 random(float min = -1.0f, float max = 1.0f) {
+        // This static generator is not thread-safe, but common for simple projects.
         static std::random_device rd;
         static std::mt19937 gen(rd());
         std::uniform_real_distribution<float> dist(min, max);
         return vec2{ dist(gen), dist(gen) };
     }
 
-    // Returns reference to allow chaining
-    vec2& normalize() {
+    vec2& normalize() noexcept {
         float length = len();
-        if (length != 0) {
+        // Use an epsilon to prevent division by near-zero
+        if (length > 1e-6f) {
             x /= length;
             y /= length;
         } else {
@@ -50,171 +84,107 @@ struct vec2
         return *this;
     }
 
-    // Returns new normalized vector
-    vec2 normalized() const {
+    vec2 normalized() const noexcept {
         vec2 result = *this;
         return result.normalize();
     }
 
-    vec2& setMag(float magnitude) {
+    vec2& setMag(float magnitude) noexcept {
         normalize();
         x *= magnitude;
         y *= magnitude;
         return *this;
     }
 
-    float angle() const {
+    float angle() const noexcept {
         return std::atan2(y, x) * TODEG;
     }
 
-    float fullAngle() const {
-        if (x == 0 && y == 0) return 0.0f;
-        if (x == 0) return (y > 0) ? 90.0f : 270.0f;
+    float fullAngle() const noexcept {
+        if (isNear(x, 0.0f) && isNear(y, 0.0f)) return 0.0f;
         
-        float ang = angle();
-        if (ang < 0) ang += 360.0f;
+        float ang = angle(); // angle() uses atan2, which handles quadrants
+        if (ang < 0.0f) ang += 360.0f;
         return ang;
     }
 
-    static vec2 from_angle(float deg) {
+    static vec2 from_angle(float deg) noexcept {
         float rad = deg * TORAD;
         return vec2{ std::cos(rad), std::sin(rad) };
     }
-
-    void display() const {
-        std::cout << "--------------------------------------\n"
-                  << "Components: { "<< x << ", " << y << " }\n"
-                  << "Length    : "<< len() << "\n"
-                  << "Angle     : "<< fullAngle() << " deg\n"
-                  << "--------------------------------------\n";
-    }
 };
 
-// Operator declarations would follow...
-
-
-// Arithmetic operations: vec2 with scalar
-vec2 operator*(float scalar, const vec2& other) {
-    return vec2{scalar * other.x, scalar * other.y};
+// --- Arithmetic operators (scalar) ---
+inline vec2 operator*(float scalar, const vec2& v) noexcept {
+    return vec2{scalar * v.x, scalar * v.y};
+}
+inline vec2 operator*(const vec2& v, float scalar) noexcept {
+    return vec2{v.x * scalar, v.y * scalar};
+}
+inline vec2 operator/(const vec2& v, float scalar) noexcept {
+    return vec2{v.x / scalar, v.y / scalar};
+}
+inline vec2 operator+(const vec2& v, float scalar) noexcept {
+    return vec2{v.x + scalar, v.y + scalar};
+}
+inline vec2 operator-(const vec2& v, float scalar) noexcept {
+    return vec2{v.x - scalar, v.y - scalar};
 }
 
-vec2 operator/(float scalar, const vec2& other) {
-    return vec2{scalar / other.x, scalar / other.y};
+// --- Arithmetic operators (vec2) ---
+inline vec2 operator+(const vec2& a, const vec2& b) noexcept {
+    return vec2{a.x + b.x, a.y + b.y};
+}
+inline vec2 operator-(const vec2& a, const vec2& b) noexcept {
+    return vec2{a.x - b.x, a.y - b.y};
+}
+inline vec2 operator*(const vec2& a, const vec2& b) noexcept {
+    return vec2{a.x * b.x, a.y * b.y};
+}
+inline vec2 operator/(const vec2& a, const vec2& b) noexcept {
+    return vec2{a.x / b.x, a.y / b.y};
 }
 
-vec2 operator+(float scalar, const vec2& other) {
-    return vec2{scalar + other.x, scalar + other.y};
+// --- Comparison (Epsilon-based) ---
+inline bool operator==(const vec2& a, const vec2& b) noexcept {
+    return vec2::isNear(a.x, b.x) && vec2::isNear(a.y, b.y);
+}
+inline bool operator!=(const vec2& a, const vec2& b) noexcept {
+    return !(a == b);
 }
 
-vec2 operator-(float scalar, const vec2& other) {
-    return vec2{scalar - other.x, scalar - other.y};
+// --- Assignment operators (vec2) ---
+inline vec2& operator+=(vec2& a, const vec2& b) noexcept {
+    a.x += b.x; a.y += b.y; return a;
+}
+inline vec2& operator-=(vec2& a, const vec2& b) noexcept {
+    a.x -= b.x; a.y -= b.y; return a;
+}
+inline vec2& operator*=(vec2& a, const vec2& b) noexcept {
+    a.x *= b.x; a.y *= b.y; return a;
+}
+inline vec2& operator/=(vec2& a, const vec2& b) noexcept {
+    a.x /= b.x; a.y /= b.y; return a;
 }
 
-// Arithmetic operations: vec2 with scalar
-vec2 operator*(const vec2& first, float scalar) {
-    return vec2{first.x * scalar, first.y * scalar};
+// --- Assignment operators (scalar) ---
+inline vec2& operator+=(vec2& v, float s) noexcept {
+    v.x += s; v.y += s; return v;
+}
+inline vec2& operator-=(vec2& v, float s) noexcept {
+    v.x -= s; v.y -= s; return v;
+}
+inline vec2& operator*=(vec2& v, float s) noexcept {
+    v.x *= s; v.y *= s; return v;
+}
+inline vec2& operator/=(vec2& v, float s) noexcept {
+    v.x /= s; v.y /= s; return v;
 }
 
-vec2 operator/(const vec2& first, float scalar) {
-    return vec2{first.x / scalar, first.y / scalar};
+// --- Debug Printing (Conditional) ---
+#if defined(PARTICLE_DEBUG) && PARTICLE_DEBUG == 1
+inline std::ostream& operator<<(std::ostream& os, const vec2& v) {
+    os << "{ x: " << v.x << ", y: " << v.y << " }";
+    return os;
 }
-
-vec2 operator+(const vec2& first, float scalar) {
-    return vec2{first.x + scalar, first.y + scalar};
-}
-
-vec2 operator-(const vec2& first, float scalar) {
-    return vec2{first.x - scalar, first.y - scalar};
-}
-
-// Arithmetic operations: vec2 with vec2
-vec2 operator+(const vec2& first, const vec2& other) {
-    return vec2{first.x + other.x, first.y + other.y};
-}
-
-vec2 operator-(const vec2& first, const vec2& other) {
-    return vec2{first.x - other.x, first.y - other.y};
-}
-
-vec2 operator*(const vec2& first, const vec2& other) {
-    return vec2{first.x * other.x, first.y * other.y};
-}
-
-vec2 operator/(const vec2& first, const vec2& other) {
-    return vec2{first.x / other.x, first.y / other.y};
-}
-
-// Comparison operators
-bool operator==(const vec2& first, const vec2& other) {
-    return (first.x == other.x) && (first.y == other.y);
-}
-
-bool operator!=(const vec2& first, const vec2& other) {
-    return !(first == other);
-}
-
-bool operator<(const vec2& first, const vec2& other) {
-    return (first.x < other.x) && (first.y < other.y);
-}
-
-bool operator<=(const vec2& first, const vec2& other) {
-    return (first.x <= other.x) && (first.y <= other.y);
-}
-
-bool operator>(const vec2& first, const vec2& other) {
-    return (first.x > other.x) && (first.y > other.y);
-}
-
-bool operator>=(const vec2& first, const vec2& other) {
-    return (first.x >= other.x) && (first.y >= other.y);
-}
-
-// Assignment operators
-vec2& operator+=(vec2& lhs, const vec2& rhs) {
-    lhs.x += rhs.x;
-    lhs.y += rhs.y;
-    return lhs;
-}
-
-vec2& operator-=(vec2& lhs, const vec2& rhs) {
-    lhs.x -= rhs.x;
-    lhs.y -= rhs.y;
-    return lhs;
-}
-
-vec2& operator*=(vec2& lhs, const vec2& rhs) {
-    lhs.x *= rhs.x;
-    lhs.y *= rhs.y;
-    return lhs;
-}
-
-vec2& operator/=(vec2& lhs, const vec2& rhs) {
-    lhs.x /= rhs.x;
-    lhs.y /= rhs.y;
-    return lhs;
-}
-
-// Assignment operators with scalar
-vec2& operator+=(vec2& lhs, float scalar) {
-    lhs.x += scalar;
-    lhs.y += scalar;
-    return lhs;
-}
-
-vec2& operator-=(vec2& lhs, float scalar) {
-    lhs.x -= scalar;
-    lhs.y -= scalar;
-    return lhs;
-}
-
-vec2& operator*=(vec2& lhs, float scalar) {
-    lhs.x *= scalar;
-    lhs.y *= scalar;
-    return lhs;
-}
-
-vec2& operator/=(vec2& lhs, float scalar) {
-    lhs.x /= scalar;
-    lhs.y /= scalar;
-    return lhs;
-}
+#endif // PARTICLE_DEBUG
